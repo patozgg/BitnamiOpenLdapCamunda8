@@ -1,0 +1,93 @@
+version: 1
+
+dn: dc=example,dc=org
+objectClass: dcObject
+objectClass: organization
+objectClass: top
+dc: example
+o: Example Inc.
+
+dn: cn=OWNER,dc=example,dc=org
+objectClass: groupOfNames
+objectClass: top
+cn: OWNER
+member: uid=operate,ou=People,dc=example,dc=org
+
+dn: ou=Groups,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: Groups
+
+dn: ou=People,dc=example,dc=org
+objectClass: organizationalUnit
+objectClass: top
+ou: People
+
+dn: ou=USER,ou=Groups,dc=example,dc=org
+objectClass: groupOfNames
+objectClass: top
+cn: USER
+member: cn=kermit+uid=kermit,ou=People,dc=example,dc=org
+ou: USER
+
+dn: cn=admin,ou=Groups,dc=example,dc=org
+objectClass: groupOfNames
+objectClass: top
+cn: admin
+member: cn=kermit+uid=kermit,ou=People,dc=example,dc=org
+
+dn: cn=OWNER,ou=Groups,dc=example,dc=org
+objectClass: groupOfNames
+objectClass: top
+cn: OWNER
+member: uid=operate,ou=People,dc=example,dc=org
+
+dn: cn=accounting,ou=Groups,dc=example,dc=org
+objectClass: groupOfNames
+objectClass: top
+cn: accounting
+member: cn=accountant,ou=People,dc=example,dc=org
+
+dn: cn=demo,ou=People,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: demo
+sn: demo
+uid: demo
+userPassword:: ZGVtbw==
+
+dn: uid=operate,ou=People,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: operate
+sn: operate
+displayName: operate
+givenName: operate
+mail: operate@example.com
+uid: operate
+userPassword:: b3BlcmF0ZQ==
+
+dn: cn=accountant,ou=People,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: accountant
+sn: accountant
+uid: accountant
+userPassword:: YWNjb3VudGFudA==
+
+dn: cn=kermit+uid=kermit,ou=People,dc=example,dc=org
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: kermit
+sn: frog
+uid: kermit
+userPassword:: a2VybWl0
+
